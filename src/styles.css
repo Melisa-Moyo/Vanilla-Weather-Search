@@ -94,3 +94,30 @@ small {
   text-decoration: none;
   margin-left: 10px;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #444343;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.9;
+}
+
+.weather-forecast-temperatures {
+  font-size: 15px;
+}
+
+img {
+  width: 110px;
+  margin-right: 10px;
+  margin-left: -20px;
+}
+
+#weather-icon {
+  margin-left: 10px;
+}
