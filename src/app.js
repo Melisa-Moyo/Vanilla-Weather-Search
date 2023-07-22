@@ -63,11 +63,12 @@ function getCurrentForecast(coordinates) {
   axios
     .get(apiUrl)
     .then((response) => {
+      console.log(response.data);
       displayWeatherForecast(response.data);
     })
     .catch((error) => {
       console.error("Error fetching weather forecast:", error);
-      displayWeatherForecast(null); // Handle error case
+      displayWeatherForecast(null);
     });
 }
 
