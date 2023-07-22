@@ -60,9 +60,15 @@ function getCurrentForecast(coordinates) {
   let apiKey = "fbbe9ta8fdc0e0287f054738101bbfo4";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&key=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then((response) => {
-    displayWeatherForecast(response.data);
-  });
+  axios
+    .get(apiUrl)
+    .then((response) => {
+      displayWeatherForecast(response.data);
+    })
+    .catch((error) => {
+      console.error("Error fetching weather forecast:", error);
+      displayWeatherForecast(null); // Handle error case
+    });
 }
 
 function showTemperature(response) {
